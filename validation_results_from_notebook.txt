@@ -1,0 +1,25 @@
+Results copied from the original notebook run (best epoch by validation kappa)
+Split: patient-level, 56 train images / 14 validation images (70 labelled images total)
+Model: HybridSNLite, 2,560,612 parameters, 10 epochs, RTX 3050 6GB
+
+OA: 0.9038 | Kappa: 0.8397
+              precision    recall  f1-score   support
+
+          NT       0.95      0.82      0.88     64812
+          TT       0.87      0.74      0.80     11858
+          BV       0.90      0.92      0.91     15262
+          BG       0.88      0.98      0.93     94888
+
+    accuracy                           0.90    186820
+   macro avg       0.90      0.86      0.88    186820
+weighted avg       0.91      0.90      0.90    186820
+
+Confusion matrix (rows=true, cols=pred; order NT, TT, BV, BG):
+ [[53173   472  1540  9627]
+ [ 1111  8806    12  1929]
+ [  107   430 14008   717]
+ [ 1535   420    72 92861]]
+
+NOTE: sample_prediction_010-03_original_notebook.png used matplotlib's default tab10 colours:
+blue = NT, orange = TT, green = BV, red = BG. Red there is background, NOT tumour.
+Re-running brain_tumor_hsi_cnn.py regenerates figures with NT green, TT red, BV blue, BG black.

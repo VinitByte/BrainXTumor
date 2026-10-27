@@ -1,0 +1,14 @@
+# data and generated files (too large / not ours to redistribute)
+*.npy
+*.pt
+*.pth
+*.hdr
+*.raw
+Dataset/
+processed_data/
+Process Data/
+
+# python / jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
